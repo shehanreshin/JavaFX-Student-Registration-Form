@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="493.0" prefWidth="738.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RegistrationFormStage1Controller">
+   <children>
+      <JFXComboBox fx:id="cmbxBatch" focusColor="#405aa800" layoutX="358.0" layoutY="184.0" prefHeight="30.0" prefWidth="146.0" promptText="Select" unFocusColor="#4d4d4d00" />
+      <ImageView fitHeight="493.0" fitWidth="371.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/image8.jpg" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblTitle" layoutX="360.0" layoutY="35.0" text="Join Our Programme" textFill="#1f1e37">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="54.0" fitWidth="82.0" layoutX="682.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/logo3.png" />
+         </image>
+      </ImageView>
+      <Circle fill="#ff9740" layoutX="714.0" layoutY="203.0" radius="5.0" stroke="#ff9740" strokeType="INSIDE" />
+      <Circle fill="#1f1e37" layoutX="714.0" layoutY="249.0" radius="5.0" stroke="#1f1e37" strokeType="INSIDE" />
+      <Circle fill="#1f1e37" layoutX="714.0" layoutY="291.0" radius="5.0" stroke="#1f1e37" strokeType="INSIDE" />
+      <Label fx:id="lblStudentID" layoutX="374.0" layoutY="92.0" text="Student ID" textFill="#1f1e37" />
+      <JFXTextField fx:id="txtStudentID" editable="false" focusColor="#1e1d3600" layoutX="360.0" layoutY="115.0" prefHeight="30.0" prefWidth="226.0" unFocusColor="#1e1d3600" />
+      <ImageView fitHeight="14.0" fitWidth="14.0" layoutX="561.0" layoutY="123.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/user.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblBatch" layoutX="374.0" layoutY="160.0" text="Batch" textFill="#1f1e37" />
+      <ImageView fitHeight="14.0" fitWidth="14.0" layoutX="366.0" layoutY="191.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/batch.png" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="txtFirstName" focusColor="#ffffff00" layoutX="357.0" layoutY="227.0" prefHeight="30.0" prefWidth="226.0" promptText="First Name" unFocusColor="#ffffff00" />
+      <ImageView fitHeight="14.0" fitWidth="14.0" layoutX="560.0" layoutY="235.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/name.png" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="txtLastName" focusColor="#ffffff00" layoutX="357.0" layoutY="266.0" prefHeight="30.0" prefWidth="226.0" promptText="Last Name" unFocusColor="#ffffff00" />
+      <ImageView fitHeight="14.0" fitWidth="14.0" layoutX="560.0" layoutY="274.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/name.png" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="txtDOB" focusColor="#ffffff00" layoutX="357.0" layoutY="303.0" prefHeight="30.0" prefWidth="226.0" promptText="Date Of Birth" unFocusColor="#ffffff00" />
+      <ImageView fitHeight="14.0" fitWidth="14.0" layoutX="560.0" layoutY="311.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/calendar.png" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="txtContactNumber" focusColor="#ffffff00" layoutX="357.0" layoutY="341.0" prefHeight="30.0" prefWidth="226.0" promptText="Contact Number" unFocusColor="#ffffff00" />
+      <ImageView fitHeight="14.0" fitWidth="14.0" layoutX="560.0" layoutY="349.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/phone.png" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="txtEmailAddress" focusColor="#ffffff00" layoutX="357.0" layoutY="378.0" prefHeight="30.0" prefWidth="226.0" promptText="Email Address" unFocusColor="#ffffff00" />
+      <ImageView fitHeight="14.0" fitWidth="14.0" layoutX="560.0" layoutY="386.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/mail.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="btnGetStarted" alignment="BASELINE_LEFT" layoutX="358.0" layoutY="423.0" onAction="#getStarted" prefHeight="30.0" prefWidth="146.0" text="Get Started" />
+      <ImageView fitHeight="17.0" fitWidth="17.0" layoutX="477.0" layoutY="430.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/arrow.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="17.0" fitWidth="13.0" layoutX="595.0" layoutY="124.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/lock.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

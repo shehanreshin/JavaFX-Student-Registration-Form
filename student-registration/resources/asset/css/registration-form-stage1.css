@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700;900&display=swap');
+
+.root {
+    -fx-font-family: 'Roboto', sans-serif;
+}
+
+#lblTitle {
+    -fx-font-weight: 900;
+}
+
+#txtStudentID {
+    -fx-background-color: #ff9740;
+    -fx-text-fill: #FFFFFF;
+    -fx-padding: 0 30 0 15;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.25), 0,0,0,2);
+    -fx-background-radius: 10;
+}
+
+#cmbxBatch {
+    -fx-background-color: #ff9740;
+    -fx-text-fill: #FFFFFF;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.25), 0,0,0,2);
+    -fx-background-radius: 10;
+    -fx-prompt-text-fill: #FFFFFF;
+    -fx-padding: 0 0 0 35;
+}
+
+#cmbxBatch:hover {
+    -fx-cursor: hand;
+}
+
+#cmbxBatch .list-cell {
+    -fx-text-fill: #FFFFFF;
+}
+
+#cmbxBatch .list-cell:focused {
+    -fx-background-color: #ff9740;
+}
+
+#cmbxBatch .list-view .list-cell {
+    -fx-text-fill: #1f1e37;
+}
+
+#cmbxBatch .list-view .list-cell:hover {
+    -fx-background-color: #ff9740;
+    -fx-cursor: hand;
+}
+
+#txtFirstName, #txtLastName, #txtDOB, #txtContactNumber, #txtEmailAddress {
+    -fx-background-color: #d7dadb;
+    -fx-text-fill: #1f1e37;
+    -fx-padding: 0 30 0 15;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.25), 0,0,0,2);
+    -fx-background-radius: 10;
+    -fx-font-weight: 400;
+    -fx-prompt-text-fill: #1f1e37;
+    -fx-border-radius: 10;
+}
+
+#txtFirstName:focused, #txtLastName:focused, #txtDOB:focused, #txtContactNumber:focused, #txtEmailAddress:focused {
+    -fx-border-width: 2;
+    -fx-border-color: #ff9740;
+    -fx-prompt-text-fill: #ff9740;
+}
+
+#btnGetStarted {
+    -fx-background-color: #3db8e8;
+    -fx-text-fill: #FFFFFF;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.25), 0,0,0,2);
+    -fx-background-radius: 20;
+    -fx-padding: 0 0 0 15;
+}
+
+#btnGetStarted:hover {
+    -fx-background-color: #1f1e37;
+    -fx-cursor: hand;
+}
+
+#lblStudentID, #lblBatch {
+    -fx-font-weight: 900;
+}

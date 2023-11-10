@@ -18,7 +18,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class RegistrationFormStage1Controller {
+public class RegistrationFormStage2Controller {
     private Stage stage;
     private Scene scene;
     private Parent root;
@@ -52,36 +52,29 @@ public class RegistrationFormStage1Controller {
     @FXML
     private JFXComboBox<String> cmbxGender;
 
-    public void getStarted(javafx.event.ActionEvent actionEvent) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/asset/fxml/RegistrationFormStage2.fxml"));
-        root = loader.load();
-        RegistrationFormStage2Controller registrationFormStage2Controller = loader.getController();
-        registrationFormStage2Controller.setup();
+    public void keepGoing(javafx.event.ActionEvent actionEvent) throws IOException{
 
-        scene = new Scene(root);
-        scene.getStylesheets()
-                .add(this.getClass()
-                        .getResource("/asset/css/registration-form-stage2.css")
-                        .toExternalForm()
-                );
-
-        stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-        stage.setScene(scene);
-        stage.show();
-    }
-
-    public String generateStudentId() {
-        /* Didn't add anything here since the assignment stated only to make
-         * the front-end */
-        return "031";
     }
 
     public void setup() {
-        cmbxBatch.getItems().add("Select");
-        cmbxBatch.getItems().add("B104");
-        cmbxBatch.getItems().add("B105");
-        cmbxBatch.getItems().add("B106");
-        cmbxBatch.getItems().add("B107");
-        txtStudentID.setText(generateStudentId());
+        cmbxEducationLevel.getItems().add("Select");
+        cmbxEducationLevel.getItems().add("Ordinary Level");
+        cmbxEducationLevel.getItems().add("Advanced Level");
+        cmbxEducationLevel.getItems().add("Undergraduate");
+        cmbxEducationLevel.getItems().add("Graduate");
+        cmbxEducationLevel.getItems().add("Masters");
+        cmbxEducationLevel.getItems().add("Doctorate");
+
+        cmbxCurrentStatus.getItems().add("Select");
+        cmbxCurrentStatus.getItems().add("Student");
+        cmbxCurrentStatus.getItems().add("Employed");
+        cmbxCurrentStatus.getItems().add("Self-employed");
+        cmbxCurrentStatus.getItems().add("Unemployed");
+
+        cmbxGender.getItems().add("Select");
+        cmbxGender.getItems().add("Male");
+        cmbxGender.getItems().add("Female");
+        cmbxGender.getItems().add("Other");
+        cmbxGender.getItems().add("Prefer not to say");
     }
 }

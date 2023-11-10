@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700;900&display=swap');
+
+.root {
+    -fx-font-family: 'Roboto', sans-serif;
+}
+
+#lblTitle {
+    -fx-font-weight: 900;
+}
+
+#cmbxEducationLevel, #cmbxCurrentStatus, #cmbxGender {
+    -fx-background-color: #ff9740;
+    -fx-text-fill: #FFFFFF;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.25), 0,0,0,2);
+    -fx-background-radius: 10;
+    -fx-prompt-text-fill: #FFFFFF;
+    -fx-padding: 0 0 0 35;
+}
+
+#cmbxEducationLevel:hover, #cmbxCurrentStatus:hover, #cmbxGender:hover {
+    -fx-cursor: hand;
+}
+
+#cmbxEducationLevel .list-cell,
+#cmbxCurrentStatus .list-cell,
+#cmbxGender .list-cell {
+    -fx-text-fill: #FFFFFF;
+}
+
+#cmbxEducationLevel .list-cell:focused,
+#cmbxCurrentStatus .list-cell:focused,
+#cmbxGender .list-cell:focused {
+    -fx-background-color: #ff9740;
+}
+
+#cmbxEducationLevel .list-view .list-cell,
+#cmbxCurrentStatus .list-view .list-cell,
+#cmbxGender .list-view .list-cell {
+    -fx-text-fill: #1f1e37;
+}
+
+#cmbxEducationLevel .list-view .list-cell:hover,
+#cmbxCurrentStatus .list-view .list-cell:hover,
+#cmbxGender .list-view .list-cell:hover {
+    -fx-background-color: #ff9740;
+    -fx-cursor: hand;
+}
+
+#txtAddressLine1, #txtAddressLine2, #txtAddressLine3 {
+    -fx-background-color: #d7dadb;
+    -fx-text-fill: #1f1e37;
+    -fx-padding: 0 30 0 15;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.25), 0,0,0,2);
+    -fx-background-radius: 10;
+    -fx-font-weight: 400;
+    -fx-prompt-text-fill: #1f1e37;
+    -fx-border-radius: 10;
+}
+
+#txtAddressLine1:focused, #txtAddressLine2:focused, #txtAddressLine3:focused {
+    -fx-border-width: 2;
+    -fx-border-color: #ff9740;
+    -fx-prompt-text-fill: #ff9740;
+}
+
+#btnKeepGoing {
+    -fx-background-color: #1f1e37;
+    -fx-text-fill: #FFFFFF;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.25), 0,0,0,2);
+    -fx-background-radius: 20;
+    -fx-padding: 0 0 0 15;
+}
+
+#btnKeepGoing:hover {
+    -fx-background-color: #ff9740;
+    -fx-cursor: hand;
+}
+
+#lblEducationLevel, #lblEducationLevel, #lblGender, #lblAddress {
+    -fx-font-weight: 900;
+}
+
+/*
+#btnStage1:hover, #btnStage3:hover {
+    -fx-cursor: hand;
+    -fx-fill: #ff9740;
+    -fx-stroke: #ff9740;
+}
+*/

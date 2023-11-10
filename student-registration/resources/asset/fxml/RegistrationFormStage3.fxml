@@ -40,7 +40,7 @@
          </image>
       </ImageView>
       <Label fx:id="lblMethodOfLearning" layoutX="374.0" layoutY="234.0" text="Method Of Learning" textFill="#1f1e37" />
-      <ImageView fitHeight="14.0" fitWidth="14.0" layoutX="366.0" layoutY="265.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="14.0" fitWidth="14.0" layoutX="366.0" layoutY="267.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/mol.png" />
          </image>

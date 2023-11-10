@@ -2,6 +2,7 @@ package controller;
 
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXComboBox;
+import com.jfoenix.controls.JFXTextArea;
 import com.jfoenix.controls.JFXTextField;
 import javafx.fxml.FXML;
 import javafx.scene.Parent;
@@ -17,33 +18,24 @@ public class RegistrationFormStage3Controller {
     private Parent root;
 
     @FXML
-    private JFXComboBox<String> cmbxBatch;
-    @FXML
     private Label lblTitle;
     @FXML
-    private Label lblStudentID;
+    private Label lblNIC;
     @FXML
-    private JFXTextField txtStudentID;
+    private Label lblMethodOfLearning;
+
     @FXML
-    private Label lblBatch;
+    private JFXTextArea txtReason;
     @FXML
-    private JFXTextField txtFirstName;
+    private JFXTextField txtGuardianContact;
     @FXML
-    private JFXTextField txtLastName;
+    private JFXTextField txtGuardianName;
     @FXML
-    private JFXTextField txtDOB;
+    private JFXTextField txtNIC;
+
     @FXML
-    private JFXTextField txtContactNumber;
-    @FXML
-    private JFXTextField txtEmailAddress;
-    @FXML
-    private JFXButton btnGetStarted;
-    @FXML
-    private JFXComboBox<String> cmbxEducationLevel;
-    @FXML
-    private JFXComboBox<String> cmbxCurrentStatus;
-    @FXML
-    private JFXComboBox<String> cmbxGender;
+    private JFXButton btnWrapItUp;
+
     @FXML
     private JFXComboBox<String> cmbxMethodOfLearning;
 

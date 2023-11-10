@@ -24,27 +24,26 @@ public class RegistrationFormStage2Controller {
     private Parent root;
 
     @FXML
-    private JFXComboBox<String> cmbxBatch;
-    @FXML
     private Label lblTitle;
     @FXML
-    private Label lblStudentID;
+    private Label lblEducationLevel;
     @FXML
-    private JFXTextField txtStudentID;
+    private Label lblCurrentStatus;
     @FXML
-    private Label lblBatch;
+    private Label lblGender;
     @FXML
-    private JFXTextField txtFirstName;
+    private Label lblAddress;
+
     @FXML
-    private JFXTextField txtLastName;
+    private JFXTextField txtAddressLine1;
     @FXML
-    private JFXTextField txtDOB;
+    private JFXTextField txtAddressLine2;
     @FXML
-    private JFXTextField txtContactNumber;
+    private JFXTextField txtAddressLine3;
+
     @FXML
-    private JFXTextField txtEmailAddress;
-    @FXML
-    private JFXButton btnGetStarted;
+    private JFXButton btnKeepGoing;
+
     @FXML
     private JFXComboBox<String> cmbxEducationLevel;
     @FXML

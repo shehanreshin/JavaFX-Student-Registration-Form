@@ -79,11 +79,3 @@
 #lblEducationLevel, #lblEducationLevel, #lblGender, #lblAddress {
     -fx-font-weight: 900;
 }
-
-/*
-#btnStage1:hover, #btnStage3:hover {
-    -fx-cursor: hand;
-    -fx-fill: #ff9740;
-    -fx-stroke: #ff9740;
-}
-*/

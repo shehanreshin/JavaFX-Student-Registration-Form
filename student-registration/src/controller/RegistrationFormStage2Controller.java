@@ -53,7 +53,21 @@ public class RegistrationFormStage2Controller {
     private JFXComboBox<String> cmbxGender;
 
     public void keepGoing(javafx.event.ActionEvent actionEvent) throws IOException{
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/asset/fxml/RegistrationFormStage3.fxml"));
+        root = loader.load();
+        RegistrationFormStage3Controller registrationFormStage3Controller = loader.getController();
+        registrationFormStage3Controller.setup();
 
+        scene = new Scene(root);
+        scene.getStylesheets()
+                .add(this.getClass()
+                        .getResource("/asset/css/registration-form-stage3.css")
+                        .toExternalForm()
+                );
+
+        stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
     }
 
     public void setup() {

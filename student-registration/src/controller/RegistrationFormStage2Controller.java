@@ -3,17 +3,14 @@ package controller;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
-import javafx.application.Application;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
-import javafx.scene.image.Image;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -21,7 +18,6 @@ import java.util.ResourceBundle;
 public class RegistrationFormStage2Controller implements Initializable {
     private Stage stage;
     private Scene scene;
-    private Parent root;
 
     @FXML
     private Label lblTitle;
@@ -51,12 +47,18 @@ public class RegistrationFormStage2Controller implements Initializable {
     @FXML
     private JFXComboBox<String> cmbxGender;
 
-    public void keepGoing(javafx.event.ActionEvent actionEvent) throws IOException{
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/asset/fxml/RegistrationFormStage3.fxml"));
-        root = loader.load();
-        RegistrationFormStage3Controller registrationFormStage3Controller = loader.getController();
+    public void keepGoing(javafx.event.ActionEvent actionEvent) throws IOException {
+        boolean isAnyInputDataInvalid =
+                !validateEducationLevel() |
+                !validateCurrentStatus() |
+                !validateGender() |
+                !validateAddress();
 
-        scene = new Scene(root);
+        if (isAnyInputDataInvalid) {
+            return;
+        }
+
+        scene = new Scene(FXMLLoader.load(getClass().getResource("/asset/fxml/RegistrationFormStage3.fxml")));
         scene.getStylesheets()
                 .add(this.getClass()
                         .getResource("/asset/css/registration-form-stage3.css")
@@ -66,6 +68,72 @@ public class RegistrationFormStage2Controller implements Initializable {
         stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
         stage.setScene(scene);
         stage.show();
+    }
+
+    public boolean validateEducationLevel() {
+        if (
+                !(cmbxEducationLevel.getValue() == null)
+                && !String.valueOf(cmbxEducationLevel.getValue()).equals("Select")
+        ) {
+            return true;
+        }
+
+        Alert alert = new Alert(Alert.AlertType.WARNING);
+        alert.setTitle("Education Level Not Selected");
+        alert.setHeaderText(null);
+        alert.setContentText("Please select your education level");
+        alert.showAndWait();
+        return false;
+    }
+
+    public boolean validateCurrentStatus() {
+        if (
+                !(cmbxCurrentStatus.getValue() == null)
+                && !String.valueOf(cmbxCurrentStatus.getValue()).equals("Select")
+        ) {
+            return true;
+        }
+
+        Alert alert = new Alert(Alert.AlertType.WARNING);
+        alert.setTitle("Current Status Not Selected");
+        alert.setHeaderText(null);
+        alert.setContentText("Please select your current status");
+        alert.showAndWait();
+        return false;
+    }
+
+    public boolean validateGender() {
+        if (
+                !(cmbxGender.getValue() == null)
+                && !String.valueOf(cmbxGender.getValue()).equals("Select")
+        ) {
+            return true;
+        }
+
+        Alert alert = new Alert(Alert.AlertType.WARNING);
+        alert.setTitle("Gender Not Selected");
+        alert.setHeaderText(null);
+        alert.setContentText("Please select your gender");
+        alert.showAndWait();
+        return false;
+    }
+
+    public boolean validateAddress() {
+        boolean isValidAddress =
+                !txtAddressLine1.getText().isEmpty() &&
+                !txtAddressLine2.getText().isEmpty() &&
+                !txtAddressLine3.getText().isEmpty() ;
+
+        if (isValidAddress) {
+            return true;
+        }
+
+        Alert alert = new Alert(Alert.AlertType.WARNING);
+        alert.setTitle("Invalid Address");
+        alert.setHeaderText(null);
+        alert.setContentText("Please enter a valid address");
+        alert.showAndWait();
+        return false;
     }
 
     @Override

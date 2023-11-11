@@ -23,7 +23,6 @@ import java.util.regex.Pattern;
 public class RegistrationFormStage1Controller implements Initializable {
     private Stage stage;
     private Scene scene;
-    private Parent root;
 
     @FXML
     private Label lblTitle;
@@ -83,7 +82,7 @@ public class RegistrationFormStage1Controller implements Initializable {
     }
 
     private boolean validateEmail() {
-        Pattern pattern = Pattern.compile("^[a-zA-Z0-9._][a-zA-Z0-9._]*@[a-zA-Z0-9._]+([.][a-zA-Z]+)+$");
+        Pattern pattern = Pattern.compile("^[a-zA-Z0-9._]+@[a-zA-Z0-9._]+([.][a-zA-Z]+)+$");
         Matcher matcher = pattern.matcher(txtEmailAddress.getText());
 
         if (matcher.find() && matcher.group().equals(txtEmailAddress.getText())) {

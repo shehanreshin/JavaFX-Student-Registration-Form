@@ -2,7 +2,6 @@ package controller;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
@@ -11,11 +10,7 @@ public class MainController extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/asset/fxml/RegistrationFormStage1.fxml"));
-        Parent root = loader.load();
-        RegistrationFormStage1Controller registrationFormStage1Controller = loader.getController();
-
-        Scene scene = new Scene(root);
+        Scene scene = new Scene(FXMLLoader.load(getClass().getResource("/asset/fxml/RegistrationFormStage1.fxml")));
         scene.getStylesheets()
                 .add(this.getClass()
                         .getResource("/asset/css/registration-form-stage1.css")

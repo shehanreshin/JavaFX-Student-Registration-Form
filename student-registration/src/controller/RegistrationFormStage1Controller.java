@@ -3,8 +3,6 @@ package controller;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
-import com.jfoenix.validation.RequiredFieldValidator;
-import javafx.application.Application;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -13,18 +11,11 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
-import javafx.scene.image.Image;
 import javafx.stage.Stage;
-
-import javax.xml.validation.Validator;
 import java.io.IOException;
 import java.net.URL;
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
-import java.time.Month;
-import java.time.Year;
 import java.time.format.DateTimeFormatter;
-import java.util.Date;
 import java.util.ResourceBundle;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -35,15 +26,14 @@ public class RegistrationFormStage1Controller implements Initializable {
     private Parent root;
 
     @FXML
-    private JFXComboBox<String> cmbxBatch;
-    @FXML
     private Label lblTitle;
     @FXML
     private Label lblStudentID;
     @FXML
-    private JFXTextField txtStudentID;
-    @FXML
     private Label lblBatch;
+
+    @FXML
+    private JFXTextField txtStudentID;
     @FXML
     private JFXTextField txtFirstName;
     @FXML
@@ -54,17 +44,16 @@ public class RegistrationFormStage1Controller implements Initializable {
     private JFXTextField txtContactNumber;
     @FXML
     private JFXTextField txtEmailAddress;
+
     @FXML
     private JFXButton btnGetStarted;
+
     @FXML
-    private JFXComboBox<String> cmbxEducationLevel;
-    @FXML
-    private JFXComboBox<String> cmbxCurrentStatus;
-    @FXML
-    private JFXComboBox<String> cmbxGender;
+    private JFXComboBox<String> cmbxBatch;
 
     public void getStarted(javafx.event.ActionEvent actionEvent) throws IOException {
-        boolean isAnyInputDataInvalid = !validateEmail() |
+        boolean isAnyInputDataInvalid =
+                !validateEmail() |
                 !validateFirstName() |
                 !validateLastName() |
                 !validateDOB() |
@@ -75,11 +64,7 @@ public class RegistrationFormStage1Controller implements Initializable {
             return;
         }
 
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/asset/fxml/RegistrationFormStage2.fxml"));
-        root = loader.load();
-        RegistrationFormStage2Controller registrationFormStage2Controller = loader.getController();
-
-        scene = new Scene(root);
+        scene = new Scene(FXMLLoader.load(getClass().getResource("/asset/fxml/RegistrationFormStage2.fxml")));
         scene.getStylesheets()
                 .add(this.getClass()
                         .getResource("/asset/css/registration-form-stage2.css")

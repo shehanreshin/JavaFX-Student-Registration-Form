@@ -14,7 +14,6 @@ public class MainController extends Application {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/asset/fxml/RegistrationFormStage1.fxml"));
         Parent root = loader.load();
         RegistrationFormStage1Controller registrationFormStage1Controller = loader.getController();
-        registrationFormStage1Controller.setup();
 
         Scene scene = new Scene(root);
         scene.getStylesheets()

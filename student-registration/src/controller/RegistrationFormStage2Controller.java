@@ -18,7 +18,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class RegistrationFormStage2Controller {
+public class RegistrationFormStage2Controller implements Initializable {
     private Stage stage;
     private Scene scene;
     private Parent root;
@@ -55,7 +55,6 @@ public class RegistrationFormStage2Controller {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/asset/fxml/RegistrationFormStage3.fxml"));
         root = loader.load();
         RegistrationFormStage3Controller registrationFormStage3Controller = loader.getController();
-        registrationFormStage3Controller.setup();
 
         scene = new Scene(root);
         scene.getStylesheets()
@@ -69,7 +68,8 @@ public class RegistrationFormStage2Controller {
         stage.show();
     }
 
-    public void setup() {
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
         cmbxEducationLevel.getItems().add("Select");
         cmbxEducationLevel.getItems().add("Ordinary Level");
         cmbxEducationLevel.getItems().add("Advanced Level");

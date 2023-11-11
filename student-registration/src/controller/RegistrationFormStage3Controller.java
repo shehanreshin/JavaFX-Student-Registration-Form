@@ -5,14 +5,17 @@ import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextArea;
 import com.jfoenix.controls.JFXTextField;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class RegistrationFormStage3Controller {
+public class RegistrationFormStage3Controller implements Initializable {
     private Stage stage;
     private Scene scene;
     private Parent root;
@@ -43,7 +46,8 @@ public class RegistrationFormStage3Controller {
 
     }
 
-    public void setup() {
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
         cmbxMethodOfLearning.getItems().add("Select");
         cmbxMethodOfLearning.getItems().add("Online");
         cmbxMethodOfLearning.getItems().add("Physical");

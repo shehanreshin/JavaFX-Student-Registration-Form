@@ -56,7 +56,7 @@
             <Image url="@../img/name.png" />
          </image>
       </ImageView>
-      <JFXTextField fx:id="txtDOB" focusColor="#ffffff00" layoutX="357.0" layoutY="303.0" prefHeight="30.0" prefWidth="226.0" promptText="Date Of Birth" unFocusColor="#ffffff00" />
+      <JFXTextField fx:id="txtDOB" focusColor="#ffffff00" layoutX="357.0" layoutY="303.0" prefHeight="30.0" prefWidth="226.0" promptText="Date Of Birth (DD-MM-YYYY)" unFocusColor="#ffffff00" />
       <ImageView fitHeight="14.0" fitWidth="14.0" layoutX="560.0" layoutY="311.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/calendar.png" />

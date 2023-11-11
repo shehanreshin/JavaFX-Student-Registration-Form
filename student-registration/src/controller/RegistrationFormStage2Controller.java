@@ -70,7 +70,7 @@ public class RegistrationFormStage2Controller implements Initializable {
         stage.show();
     }
 
-    public boolean validateEducationLevel() {
+    private boolean validateEducationLevel() {
         if (
                 !(cmbxEducationLevel.getValue() == null)
                 && !String.valueOf(cmbxEducationLevel.getValue()).equals("Select")
@@ -86,7 +86,7 @@ public class RegistrationFormStage2Controller implements Initializable {
         return false;
     }
 
-    public boolean validateCurrentStatus() {
+    private boolean validateCurrentStatus() {
         if (
                 !(cmbxCurrentStatus.getValue() == null)
                 && !String.valueOf(cmbxCurrentStatus.getValue()).equals("Select")
@@ -102,7 +102,7 @@ public class RegistrationFormStage2Controller implements Initializable {
         return false;
     }
 
-    public boolean validateGender() {
+    private boolean validateGender() {
         if (
                 !(cmbxGender.getValue() == null)
                 && !String.valueOf(cmbxGender.getValue()).equals("Select")
@@ -118,7 +118,7 @@ public class RegistrationFormStage2Controller implements Initializable {
         return false;
     }
 
-    public boolean validateAddress() {
+    private boolean validateAddress() {
         boolean isValidAddress =
                 !txtAddressLine1.getText().isEmpty() &&
                 !txtAddressLine2.getText().isEmpty() &&

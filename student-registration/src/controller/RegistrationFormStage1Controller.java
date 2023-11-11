@@ -7,7 +7,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
@@ -75,7 +74,7 @@ public class RegistrationFormStage1Controller implements Initializable {
         stage.show();
     }
 
-    public String generateStudentId() {
+    private String generateStudentId() {
         /* Didn't add anything here since the assignment stated only to make
          * the front-end */
         return "031";
@@ -98,7 +97,7 @@ public class RegistrationFormStage1Controller implements Initializable {
     }
 
     private boolean validateFirstName() {
-        Pattern pattern = Pattern.compile("^[a-zA-Z]{5,}$");
+        Pattern pattern = Pattern.compile("^[a-zA-Z]{3,}$");
         Matcher matcher = pattern.matcher(txtFirstName.getText());
 
         if (matcher.find() && matcher.group().equals(txtFirstName.getText())) {
@@ -114,7 +113,7 @@ public class RegistrationFormStage1Controller implements Initializable {
     }
 
     private boolean validateLastName() {
-        Pattern pattern = Pattern.compile("^[a-zA-Z]{5,}$");
+        Pattern pattern = Pattern.compile("^[a-zA-Z]{3,}$");
         Matcher matcher = pattern.matcher(txtLastName.getText());
 
         if (matcher.find() && matcher.group().equals(txtLastName.getText())) {
